@@ -1103,11 +1103,6 @@ footer #devise {
     width: calc(100% / 3 - 20px);
   }
 
-  .container {
-    width: 90vw;
-    margin: auto;
-    box-sizing: border-box;
-  }
   #conseils ul li {
     flex: 1;
   }
