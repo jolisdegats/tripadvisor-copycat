@@ -25,13 +25,13 @@ $.addEventListener("DOMContentLoaded", () => {
       message: document.querySelector("#message").value,
     };
 
-    console.log(data);
+    // console.log(data);
 
     const response = await axios.post(
       "https://0c9e5f8419fd.ngrok.io/submit-form",
       data
     );
-    console.log(response);
+    // console.log(response);
 
     if (response.status === 200) {
       alert("Merci pour votre message ! Votre formulaire a bien été envoyé");
