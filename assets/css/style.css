@@ -218,6 +218,85 @@ ul::-webkit-scrollbar-thumb {
   font-size: 0.8rem;
 }
 
+/* POP-UP FORMULAIRE */
+.popup {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popupbackground {
+  background: black;
+  opacity: 0.8;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.popupbody {
+  width: 328px;
+  padding: 30px 45px 50px;
+  background-color: #faf1ed;
+  color: #000;
+  opacity: 1;
+  position: absolute;
+  border-radius: 12px;
+}
+
+#contactForm .icon-times {
+  text-align: right;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+#contactForm {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#contactForm h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#contactForm input,
+#contactForm textarea {
+  outline: none;
+  padding: 10px;
+  margin: 5px 0;
+  border: none;
+  box-shadow: none;
+  font-family: inherit;
+  border-radius: 6px;
+}
+
+#contactForm .submit {
+  background-color: #ff5d5d;
+  color: white;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.visible {
+  display: flex;
+  transition: 0.5s linear;
+}
+
+.hidden {
+  display: none;
+  transition: 0.1s linear;
+}
+
 /* RESPONSIVE ITEMS */
 .mobile-only {
   display: inherit;
@@ -1050,7 +1129,7 @@ footer #devise {
     height: 40px;
   }
   .container {
-    width: 75vw;
+    width: 80vw;
     margin: auto;
     box-sizing: border-box;
   }

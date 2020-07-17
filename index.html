@@ -7,13 +7,37 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/fonts.css" />
     <link rel="stylesheet" href="./assets/css/icon.css" />
-    <script
-      src="https://kit.fontawesome.com/76c5a66596.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="assets/js/main.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Tourisme à Rome 2020 : Visiter Rome, Italie - Tripadvisor</title>
   </head>
   <body>
+    <div class="popup hidden">
+      <div class="popupbackground"></div>
+      <div class="popupbody">
+        <form id="contactForm" method="POST" action="/submit-form">
+          <i class="icon-times close"></i>
+          <h2>Nous contacter</h2>
+          <input
+            type="text"
+            id="firstname"
+            name="firstname"
+            placeholder="Prénom"
+          />
+          <input type="text" id="lastname" name="lastname" placeholder="Nom" />
+          <input type="text" id="email" name="email" placeholder="Email" />
+          <input type="text" id="sujet" name="sujet" placeholder="Sujet" />
+          <textarea
+            name="message"
+            id="message"
+            cols="30"
+            rows="10"
+            placeholder="Votre message ici..."
+          ></textarea>
+          <input class="submit" type="submit" value="Envoyer le formulaire" />
+        </form>
+      </div>
+    </div>
     <div id="banner">
       <div class="container">
         <span
@@ -52,7 +76,7 @@
               <i class="icon-heart"></i><span>Voyages</span>
             </li>
           </ul>
-          <button>Connectez-vous</button>
+          <button class="contactOpener">Connectez-vous</button>
         </nav>
         <nav id="mobile-menu">
           <i class="icon-menu_bars mobile-only"></i>
@@ -109,7 +133,7 @@
               ><i class="icon-photo"></i> Toutes les photos
             </div>
             <div class="herophotoimg">
-            <a class="divlink" href=""><span></span></a>
+              <a class="divlink" href=""><span></span></a>
             </div>
           </div>
           <div class="addphotos">
