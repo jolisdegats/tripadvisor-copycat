@@ -1103,6 +1103,11 @@ footer #devise {
     width: calc(100% / 3 - 20px);
   }
 
+  .container {
+    width: 80vw;
+    margin: auto;
+    box-sizing: border-box;
+  }
   #conseils ul li {
     flex: 1;
   }
@@ -1130,7 +1135,7 @@ footer #devise {
     height: 40px;
   }
   .container {
-    width: 80vw;
+    width: 60vw;
     margin: auto;
     box-sizing: border-box;
   }
@@ -1138,11 +1143,3 @@ footer #devise {
     display: none !important;
   }
 }
-
-/* Rules */
-
-/* .submenu li {
-    flex: 0 0 auto !important;
-    width: calc(25% - 60px);
-    height: 30px;
-  }*/
