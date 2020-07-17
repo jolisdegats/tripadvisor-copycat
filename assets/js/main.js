@@ -5,9 +5,11 @@ $.addEventListener("DOMContentLoaded", () => {
 
   $.querySelector(".close").addEventListener("click", () => {
     $.querySelector(".visible").classList.replace("visible", "hidden");
+    $.getElementById("contactForm").reset();
   });
   $.querySelector(".popupbackground").addEventListener("click", () => {
     $.querySelector(".visible").classList.replace("visible", "hidden");
+    $.getElementById("contactForm").reset();
   });
 
   $.querySelector(".contactOpener").addEventListener("click", () => {
@@ -25,18 +27,16 @@ $.addEventListener("DOMContentLoaded", () => {
       message: document.querySelector("#message").value,
     };
 
-    // console.log(data);
-
     const response = await axios.post(
       "https://0c9e5f8419fd.ngrok.io/submit-form",
       data
     );
-    // console.log(response);
 
     if (response.status === 200) {
       alert("Merci pour votre message ! Votre formulaire a bien été envoyé");
     }
 
     $.querySelector(".visible").classList.replace("visible", "hidden");
+    $.getElementById("contactForm").reset();
   });
 });
