@@ -29,7 +29,7 @@ $.addEventListener("DOMContentLoaded", () => {
 
     console.log(data);
     const response = await axios.post(
-      "https://tripadvisor-copycat.netlify.app/submit-form",
+      "https://tripadvisor-copycat-back.herokuapp.com/submit-form",
       data
     );
     console.log(response);
