@@ -20,15 +20,18 @@ $.addEventListener("DOMContentLoaded", () => {
     event.preventDefault();
 
     const data = {
-      firstname: document.querySelector("#firstname").value,
-      lastname: document.querySelector("#lastname").value,
-      email: document.querySelector("#email").value,
-      subject: document.querySelector("#subject").value,
-      message: document.querySelector("#message").value,
+      firstname: $.querySelector("#firstname").value,
+      lastname: $.querySelector("#lastname").value,
+      email: $.querySelector("#email").value,
+      subject: $.querySelector("#subject").value,
+      message: $.querySelector("#message").value,
     };
 
     console.log(data);
-    const response = await axios.post("/submit-form", data);
+    const response = await axios.post(
+      "https://tripadvisor-copycat.netlify.app/submit-form",
+      data
+    );
     console.log(response);
 
     if (response.status === 200) {
