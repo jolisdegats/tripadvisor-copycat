@@ -28,14 +28,13 @@ $.addEventListener("DOMContentLoaded", () => {
     };
 
     console.log(data);
-    const response = await axios.post(
-      "https://tripadvisor-copycat.netlify.app/submit-form",
-      data
-    );
+    const response = await axios.post("/submit-form", data);
     console.log(response);
 
     if (response.status === 200) {
       alert("Merci pour votre message ! Votre formulaire a bien été envoyé");
+    } else {
+      console.log(error.response);
     }
 
     $.querySelector(".visible").classList.replace("visible", "hidden");
