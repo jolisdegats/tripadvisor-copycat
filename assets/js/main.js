@@ -27,10 +27,7 @@ $.addEventListener("DOMContentLoaded", () => {
       message: document.querySelector("#message").value,
     };
 
-    const response = await axios.post(
-      "https://tripadvisor-copycat.netlify.app/submit-form",
-      data
-    );
+    const response = await axios.post("/submit-form", data);
 
     if (response.status === 200) {
       alert("Merci pour votre message ! Votre formulaire a bien été envoyé");
