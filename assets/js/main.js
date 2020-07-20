@@ -28,7 +28,7 @@ $.addEventListener("DOMContentLoaded", () => {
     };
 
     const response = await axios.post(
-      "https://0c9e5f8419fd.ngrok.io/submit-form",
+      "https://tripadvisor-copycat.netlify.app/submit-form",
       data
     );
 
