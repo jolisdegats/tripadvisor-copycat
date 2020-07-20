@@ -27,6 +27,7 @@ $.addEventListener("DOMContentLoaded", () => {
       message: document.querySelector("#message").value,
     };
 
+    console.log(data);
     const response = await axios.post("/submit-form", data);
 
     if (response.status === 200) {
